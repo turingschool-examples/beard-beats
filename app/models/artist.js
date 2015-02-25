@@ -10,7 +10,7 @@ Artist.reopenClass({
   FIXTURES: [
     { id: 1, name: "Iron and Wine", albums: [ 1, 2 ] },
     { id: 2, name: "Bon Iver", albums: [ 3, 4 ] },
-    { id: 3, name: "Father John Misty", albums: [ 5, 6 ] }
+    { id: 3, name: "Ray Lamontagne", albums: [ 5, 6 ] }
   ]
 });
 
