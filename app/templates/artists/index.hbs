@@ -1,0 +1,7 @@
+<h3>Artists Index (artists/index.hbs)</h3>
+
+<ul>
+{{#each artist in content}}
+  <li>{{#link-to 'artist' artist}}{{artist.name}}{{/link-to}}</li>
+{{/each}}
+</ul>
