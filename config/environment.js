@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-jukebox',
+    modulePrefix: 'beard-beats',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
