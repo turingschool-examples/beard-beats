@@ -1,0 +1,11 @@
+<div class="artists template">
+  <p>This is <em>artists.hbs</em>.</p>
+
+  <ul class="artists">
+    {{#each model as |artist|}}
+    <li>{{artist.name}}</li>
+    {{/each}}
+  </ul>
+
+  {{outlet}}
+</div>
