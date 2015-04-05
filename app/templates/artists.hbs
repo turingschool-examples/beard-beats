@@ -3,7 +3,7 @@
 
   <ul class="artists">
     {{#each model as |artist|}}
-    <li>{{artist.name}}</li>
+    <li>{{#link-to 'artist' artist}}{{artist.name}}{{/link-to}}</li>
     {{/each}}
   </ul>
 
