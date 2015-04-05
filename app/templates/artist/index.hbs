@@ -6,5 +6,7 @@
     <p>Something about {{model.name}}. Lorem ipsum…</p>
   </div>
 
+  {{render 'albums' model.albums}}
+
   <p>{{#link-to 'albums' class="button"}}Albums &rarr;{{/link-to}}</p>
 </div>
