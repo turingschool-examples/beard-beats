@@ -17,7 +17,7 @@ Song.reopenClass({
       album: 1
     },
     {
-      id: 4,
+      id: 2,
       title: "Promising Light",
       trackNumber: 2,
       timeInSeconds: 169,
