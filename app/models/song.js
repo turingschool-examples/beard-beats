@@ -17,7 +17,7 @@ Song.reopenClass({
       album: 1
     },
     {
-      id: 4,
+      id: 2,
       title: "Promising Light",
       trackNumber: 2,
       timeInSeconds: 169,
@@ -35,14 +35,14 @@ Song.reopenClass({
       title: "Caught in the Briars",
       trackNumber: 1,
       timeInSeconds: 194,
-      album: 1
+      album: 2
     },
     {
       id: 5,
       title: "Lovers' Revolution",
       trackNumber: 11,
       timeInSeconds: 340,
-      album: 1
+      album: 2
     },
     {
       id: 6,

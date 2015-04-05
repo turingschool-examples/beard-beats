@@ -5,7 +5,9 @@
 
   <ul class="albums">
     {{#each model as |album|}}
-    <li>{{album.title}} ({{album.releaseDate}})</li>
+    <li>{{#link-to 'album' album}}{{album.title}} ({{album.releaseDate}}){{/link-to}}</li>
     {{/each}}
   </ul>
+
+  {{outlet}}
 </div>

@@ -1,0 +1,12 @@
+<div class="album template">
+
+  <h4>{{model.title}}</h4>
+
+  <ul class="songs">
+    {{#each model.songs as |song|}}
+    <li>{{song.trackNumber}} - {{song.title}} ({{song.timeInSeconds}} seconds)</li>
+    {{/each}}
+  </ul>
+
+  {{outlet}}
+</div>
