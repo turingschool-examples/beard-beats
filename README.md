@@ -32,7 +32,7 @@ By the time we've drilled down to a song, we're going to end up with something l
 
 In Rails, this might fire off one controller action that matches the above route.
 
-In Ember, things work a little differently. Each segment kicks off a route and a controller. We'll have an artists route, an artist route, an albums route, an album route, a songs route, and a song route—each with their respective controllers, templates, and views.
+In Ember, things work a little differently. Each segment kicks off a route and a controller. We'll have an artists route, an artist route, an albums route, an album route, a songs route, and a song resource—each with their respective controllers, templates, and views.
 
 Sounds crazy, right? Let's take a slow and deliberate walk through how this works.
 
@@ -86,8 +86,10 @@ Those are all of the routes we're going to get for free. If we want anymore, we'
 Let's just go ahead and generate an Artists route, shall we?
 
 ```
-ember g route artists
+ember g resource artists
 ```
+
+(Make sure you *do not* override the model.)
 
 It's probably a good idea to update `index.hbs` with a link to our new route.
 
@@ -156,37 +158,21 @@ Head back over the browser and you should see each of our three bearded artists.
 We can see our list of artists, but now we want to drill down to see an individual artist. Let's start by generating another route.
 
 ```
-ember g route artist
+ember g resource artist
 ```
 
 ### The Router
 
 In our URL scheme, `/artist` will trigger the Artists route and then `/artist/1` will trigger the singular Artist route and render it's template into Artists `{{outlet}}`. Simple, right?
 
-So, our generators have secretly been modifying `app/router.js` behind our backs. Let's go check in and take a look.
-
-```js
-import Ember from 'ember';
-import config from './config/environment';
-
-var Router = Ember.Router.extend({
-  location: config.locationType
-});
-
-export default Router.map(function() {
-  this.route('artists');
-  this.route('artist');
-});
-```
-
-We're going to have to modify this a bit, in our to get that nested functionality we're looking for.
+So, our generators have secretly been modifying `app/router.js` behind our backs. We're going to have to modify this a bit, in our to get that nested functionality we're looking for.
 
 ```js
 // Some boiler plate code lives above.
 
 export default Router.map(function() {
   this.resource('artists', function () {
-    this.resource('artist', { path: ':id' });
+    this.resource('artist', { path: ':artist_id' });
   });
 });
 ```
@@ -262,7 +248,7 @@ Those index routes could potentially be used to—you know—index things, right
 So, artists have many albums, right? Let's generate a route for albums.
 
 ```
-ember g route albums
+ember g resource albums
 ```
 
 We'll continue the nesting in our `app/router.js` as well:
@@ -362,7 +348,7 @@ We want to do the same thing for songs as we did for albums.
 Just as we needed a singular `artist` route, we'll need a singular `album` route. Let's go ahead and generate that now.
 
 ```
-ember g route album
+ember g resource album
 ```
 
 We'll have to continue our nesting in `app/router.js` as well.
