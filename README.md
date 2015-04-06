@@ -32,7 +32,7 @@ By the time we've drilled down to a song, we're going to end up with something l
 
 In Rails, this might fire off one controller action that matches the above route.
 
-In Ember, things work a little differently. Each segment kicks off a route and a controller. We'll have an artists route, an artist route, an albums route, an album route, a songs route, and a song resource—each with their respective controllers, templates, and views.
+In Ember, things work a little differently. Each segment kicks off a route and a controller. We'll have an artists route, an artist route, an albums route, an album route, a songs route, and a song route—each with their respective controllers, templates, and views.
 
 Sounds crazy, right? Let's take a slow and deliberate walk through how this works.
 
