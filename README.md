@@ -402,7 +402,7 @@ And we'll link to our new `album` route in `app/templates/albums.hbs`:
 
   <ul class="albums">
     {{#each model as |album|}}
-    <li>{{#link-to 'albums' album}}{{album.title}} ({{album.releaseDate}}){{/link-to}}</li>
+    <li>{{#link-to 'album' album}}{{album.title}} ({{album.releaseDate}}){{/link-to}}</li>
     {{/each}}
   </ul>
 </div>
