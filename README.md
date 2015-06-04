@@ -193,7 +193,7 @@ This created an `artists` folder in our `app/templates` directory and placed an 
 
 ```html
 <div class="artist-index template">
-  <p>This is <em>artists/index.hbs</em>.</p>
+  <p>This is <em>artist/index.hbs</em>.</p>
 </div>
 ```
 
